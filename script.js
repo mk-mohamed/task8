@@ -7,9 +7,7 @@ let eNamei = document.querySelector("#editName")
 let eDesci = document.querySelector("#editDesc")
 let currentIndex = null
 let saveBtn = document.querySelector("#saveEditBtn")
-let tasks =[];
-let save = localStorage.getItem('tasks')
-tasks = JSON.parse(save)
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []
 function bild() {
     taskB.innerHTML = ""
     tasks.forEach((el , index) => {
